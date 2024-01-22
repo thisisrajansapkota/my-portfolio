@@ -48,6 +48,10 @@ a {
 .primary-header .left div:nth-child(1) h1 {
   font-size: 1.8rem;
 }
+.primary-header .left div:nth-child(1) img {
+  width: 125px;
+  cursor: vertical-text;
+}
 .primary-header .left div:nth-child(2) {
   width: 5px;
   height: 2rem;
@@ -73,7 +77,11 @@ a {
   padding: 3rem 5rem;
 }
 .section1 .hero {
-  background-color: #edbd74;
+  background-image: url(assets/img/user.jpg);
+  opacity: 0.7;
+  background-size: cover;
+  background-position-y: 25%;
+  min-height: 550px;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -89,10 +97,12 @@ a {
   align-items: start;
   flex-direction: column;
   color: white;
+  opacity: 9;
 }
 .section1 .hero .left .name {
   font-size: 2rem;
   font-weight: bold;
+  opacity: 1;
 }
 .section1 .hero .left .tag {
   font-size: 1.4rem;
@@ -117,8 +127,11 @@ a {
   flex: 1;
 }
 .section1 .hero .right img {
-  height: 300px;
+  height: 200px;
   transform: scale(1.4) translateY(-5px);
+}
+.section1 .hero:hover {
+  opacity: 0.9;
 }
 
 .section2 {

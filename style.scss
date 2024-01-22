@@ -49,6 +49,11 @@ a {
         h1 {
           font-size: 1.8rem;
         }
+        img{
+          width: 125px;
+         cursor: vertical-text;
+        }
+       
       }
       &:nth-child(2) {
         width: 5px;
@@ -81,7 +86,14 @@ a {
 .section1 {
   padding: 3rem 5rem;
   .hero {
-    background-color: $secondary-color;
+
+
+ 
+     background-image: url(assets/img/user.jpg);
+     opacity: 0.7;
+      background-size: cover;
+      background-position-y: 25%;
+      min-height: 550px;
     padding: 3rem;
     @include flex-me;
     .left {
@@ -90,9 +102,11 @@ a {
       align-items: start;
       flex-direction: column;
       color: $white-color;
+     opacity: 9;
       .name {
         font-size: 2rem;
         font-weight: bold;
+        opacity: 1;
       }
       .tag {
         font-size: 1.4rem;
@@ -114,11 +128,15 @@ a {
       justify-content: end;
       flex: 1;
       img {
-        height: 300px;
+        height: 200px;
         transform: scale(1.4) translateY(-5px);
       }
+      
     }
   }
+ .hero:hover {
+  opacity: 0.9;
+}
 }
 
 // Section 2 Banner
@@ -132,6 +150,7 @@ a {
     .info-lists {
       @include flex-me;
       justify-content: space-evenly;
+
       .info-content {
         @include flex-me;
         .icon-container {
@@ -175,6 +194,7 @@ a {
     div {
       @include flex-me();
       flex-direction: column;
+
       i {
         font-size: 5rem;
       }
@@ -350,7 +370,8 @@ footer {
   }
 }
 
-//Responsive Design
+//Responsive Design starts here-------------
+
 @import "./_breakpoint";
 
 @include tablet() {
@@ -380,8 +401,15 @@ footer {
     }
   }
   .section1 {
+
     .hero {
       flex-direction: column-reverse;
+     
+    
+     
+     
+
+
       .right {
         margin-bottom: 3rem;
         img {
@@ -393,7 +421,6 @@ footer {
   .section2 {
     .info-container {
       font-size: small;
-      // height: 54vh;
     }
     .info-lists {
       flex-direction: column;
