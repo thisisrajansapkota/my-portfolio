@@ -20,10 +20,11 @@ a {
 }
 
 .primary-header {
+  height: 65px;
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #4f6ca6;
+  background: linear-gradient(to left, #559de9, #0d908b);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
@@ -45,17 +46,27 @@ a {
   align-items: center;
   gap: 1rem;
 }
+.primary-header .left div:nth-child(1) {
+  /* Hover Animation */
+}
 .primary-header .left div:nth-child(1) h1 {
   font-size: 1.8rem;
 }
-.primary-header .left div:nth-child(1) img {
+.primary-header .left div:nth-child(1) .logo {
   width: 125px;
-  cursor: vertical-text;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 400ms;
+}
+.primary-header .left div:nth-child(1) .logo:hover {
+  will-change: transform;
+  transition: transform 400ms;
+  transform: translateY(-5px);
 }
 .primary-header .left div:nth-child(2) {
   width: 5px;
   height: 2rem;
-  background-color: #edbd74;
+  background-color: #99c074;
 }
 .primary-header .left div:nth-child(3) h1 {
   font-size: 1rem;
@@ -67,10 +78,19 @@ a {
   align-items: center;
   gap: 1rem;
 }
+.primary-header .right .navigation li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 55px;
+  height: 65px;
+}
 .primary-header .right .navigation li:hover {
-  color: #edbd74;
-  transition: all 0.3s;
-  transform: translateY(-3px);
+  will-change: transform;
+  transition: transform 0.5s;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px #99c074;
 }
 
 .section1 {
@@ -139,7 +159,7 @@ a {
 }
 .section2 .info-container {
   padding: 2rem;
-  background-color: #4f6ca6;
+  background-color: #41a29b;
   border-radius: 6.25rem;
   border: 4px solid black;
 }
@@ -157,7 +177,7 @@ a {
   gap: 1rem;
 }
 .section2 .info-container .info-lists .info-content .icon-container {
-  background-color: #edbd74;
+  background-color: #99c074;
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
@@ -171,12 +191,12 @@ a {
   color: white;
 }
 .section2 .info-container .info-lists .info-content p {
-  color: #edbd74;
+  color: #99c074;
 }
 .section2 .info-container .info-lists .divider {
   width: 5px;
   height: 40px;
-  background-color: #edbd74;
+  background-color: #99c074;
 }
 
 .section3 {
@@ -215,7 +235,7 @@ a {
 }
 .section4 .project-container .project-card {
   flex-basis: 200px;
-  background-color: #4f6ca6;
+  background-color: #41a29b;
   box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.236);
   border-radius: 10px;
   overflow: hidden;
@@ -223,7 +243,7 @@ a {
 }
 .section4 .project-container .project-card:hover {
   transform: translateY(-10px);
-  border: 5px solid #edbd74;
+  border: 5px solid #99c074;
 }
 .section4 .project-container .project-card .bottom .icons {
   display: flex;
@@ -238,7 +258,7 @@ a {
   text-align: center;
 }
 .section5 {
-  background-color: #edbd74;
+  background-color: #99c074;
   padding-top: 4.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -291,7 +311,7 @@ a {
 }
 
 .section6 {
-  background-color: #4f6ca6;
+  background-color: #41a29b;
   padding: 3rem;
   padding-top: 5rem;
   display: flex;
@@ -324,7 +344,7 @@ a {
   gap: 1rem;
 }
 .section6 .email-section .email .send {
-  background-color: #edbd74;
+  background-color: #99c074;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -385,7 +405,7 @@ footer .footer-container .social-links ul {
 }
 
 .floating {
-  background-color: #edbd74;
+  background-color: #99c074;
   color: white;
   position: fixed;
   right: 50px;
@@ -393,6 +413,7 @@ footer .footer-container .social-links ul {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,15 +423,38 @@ footer .footer-container .social-links ul {
   font-size: 2 rem;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media (width <= 768px) {
   .primary-header .right .menu-icon {
+    margin-top: 35px;
     display: block;
     cursor: pointer;
+    top: -13px;
+    left: -15px;
+    position: relative;
+  }
+  .primary-header .right .menu-icon:hover {
+    will-change: transform;
+    transition: transform 400ms;
+    transition: box-shadow 0.3s ease-in-out;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   .primary-header .right .navigation {
     position: fixed;
     left: 100%;
-    background-color: #4f6ca6;
+    background-color: #41a29b;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -485,7 +529,7 @@ footer .footer-container .social-links ul {
   .primary-header .right .navigation {
     position: fixed;
     left: 100%;
-    background-color: #4f6ca6;
+    background-color: #41a29b;
     height: 100vh;
     width: 100vw;
     display: flex;

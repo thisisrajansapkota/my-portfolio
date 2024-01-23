@@ -22,7 +22,7 @@
         <div class="left">
           <div>
             <!-- <h1>Rajan</h1> -->
-            <img src="assets/img/name.png">
+            <img class="logo" src="assets/img/name.png">
           </div>
           <div class="line"></div>
           <div>
@@ -30,8 +30,9 @@
           </div>
         </div>
         <div class="right">
-          <input type="checkbox" id="check" />
+          <input  class="toggler" type="checkbox" id="check" />
           <label for="check" class="menu-icon">
+         
             <i class="fa-solid fa-bars"></i>
           </label>
 
@@ -141,15 +142,19 @@
       <section class="section4" id="projects">
         <h2 class="title">My Recent Work</h2>
         <div class="project-container">
+
           <div class="project-card">
+            <a href="https://javascript-calculator-mu.vercel.app/">
             <div class="top">
-              <img src="./assets/img/project.png" alt="Project" width="100%" />
+              <img src="./assets/img/Js-Calculator.png" alt="Project" width="100%" />
             </div>
             <div class="bottom">
              
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
+              <p>Calculator App</p>
+              <p>HTML, CSS, JavaScript</p>
+
             </div>
+            </a>
           </div>
 
           <div class="project-card">
@@ -160,7 +165,7 @@
             <div class="bottom">
              
               <p>Movie Search </p>
-              <p>ReactJs, Movie API</p>
+              <p>ReactJs, API call</p>
             </div>
             </a>
           </div>
@@ -179,36 +184,42 @@
           </div>
 
           <div class="project-card">
+            <a href="https://not-to-do-list-js.vercel.app/">
             <div class="top">
-              <img src="./assets/img/project.png" alt="Project" width="100%" />
+              <img src="./assets/img/notToDoList-Js.png" alt="Project" width="100%" />
             </div>
             <div class="bottom">
              
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
+              <p>Todo List</p>
+             <p>HTML, CSS, JavaScript</p>
             </div>
+            </a>
           </div>
 
           <div class="project-card">
+            <a href="https://random-user-api-rouge.vercel.app/">
             <div class="top">
-              <img src="./assets/img/project.png" alt="Project" width="100%" />
+              <img src="./assets/img/RandomUserAPI-JS.png" alt="Project" width="100%" />
             </div>
             <div class="bottom">
               
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
+              <p>Random User Search</p>
+              <p>JavaScrip, API call</p>
             </div>
+            </a>
           </div>
 
           <div class="project-card">
+            <a href="https://library-management-vkzy.vercel.app/">
             <div class="top">
-              <img src="./assets/img/project.png" alt="Project" width="100%" />
+              <img src="./assets/img/BookStore-React.png" alt="Project" width="100%" />
             </div>
           
               <p>Portfolio with React</p>
               <p>Nov 1, 2023</p>
             </div>
           </div>
+          </a>
         </div>
       </section>
 
@@ -296,7 +307,7 @@
       <!-- floating Icon -->
       <a href="#hero">
         <div class="floating">
-          <i class="fa-solid fa-arrow-up"></i>
+          <i id="flo" class="fa-solid fa-arrow-up"></i>
         </div>
       </a>
     </div>

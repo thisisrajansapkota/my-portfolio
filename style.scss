@@ -1,5 +1,5 @@
-$primary-color: #4f6ca6;
-$secondary-color: #edbd74;
+$primary-color: #41a29b;
+$secondary-color: #99c074;
 $white-color: white;
 $black-color: black;
 
@@ -32,10 +32,11 @@ a {
 }
 
 .primary-header {
+  height: 65px;
   position: sticky;
   top: 0;
   z-index: 999;
-  background: $primary-color;
+  background: linear-gradient(to left, #559de9, #0d908b);;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   @include flex-me;
   align-items: center;
@@ -49,11 +50,23 @@ a {
         h1 {
           font-size: 1.8rem;
         }
-        img{
+        .logo {
           width: 125px;
-         cursor: vertical-text;
+          //  cursor: none
+          cursor: pointer;
+          will-change: transform;
+          transition: transform 400ms;
+          // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
         }
-       
+
+        /* Hover Animation */
+     
+        .logo:hover {
+          will-change: transform;
+          transition: transform 400ms;
+          transform: translateY(-5px);
+
+        }
       }
       &:nth-child(2) {
         width: 5px;
@@ -71,11 +84,21 @@ a {
   .right {
     .navigation {
       @include flex-me;
-      li {
+    
+
+     li {
+      @include flex-me;
+width: 55px;
+   height: 65px;
+
+
         &:hover {
-          color: $secondary-color;
-          transition: all 0.3s;
-          transform: translateY(-3px);
+    will-change: transform;
+          transition: transform 0.5s;
+          transform: translateY(-5px);
+          //  opacity: 0.9;   
+ box-shadow: 0px 0px 10px $secondary-color;
+          
         }
       }
     }
@@ -86,14 +109,11 @@ a {
 .section1 {
   padding: 3rem 5rem;
   .hero {
-
-
- 
-     background-image: url(assets/img/user.jpg);
-     opacity: 0.7;
-      background-size: cover;
-      background-position-y: 25%;
-      min-height: 550px;
+    background-image: url(assets/img/user.jpg);
+    opacity: 0.7;
+    background-size: cover;
+    background-position-y: 25%;
+    min-height: 550px;
     padding: 3rem;
     @include flex-me;
     .left {
@@ -102,7 +122,7 @@ a {
       align-items: start;
       flex-direction: column;
       color: $white-color;
-     opacity: 9;
+      opacity: 9;
       .name {
         font-size: 2rem;
         font-weight: bold;
@@ -131,12 +151,11 @@ a {
         height: 200px;
         transform: scale(1.4) translateY(-5px);
       }
-      
     }
   }
- .hero:hover {
-  opacity: 0.9;
-}
+  .hero:hover {
+    opacity: 0.9;
+  }
 }
 
 // Section 2 Banner
@@ -364,15 +383,31 @@ footer {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+
   @include flex-me();
   i {
     font-size: 2 rem;
   }
 }
 
+
+
+
+
 //Responsive Design starts here-------------
 
 @import "./_breakpoint";
+
+  @keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  
+  }
 
 @include tablet() {
   .primary-header {
@@ -380,9 +415,31 @@ footer {
     // justify-content: space-evenly;
     .right {
       .menu-icon {
+        margin-top: 35px;
         display: block;
         cursor: pointer;
+  top: -13px;
+  left: -15px;
+      position: relative;
       }
+
+      .menu-icon:hover{
+
+      will-change: transform;
+    transition: transform 400ms;
+    transition: box-shadow 0.3s ease-in-out;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+     animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+      }
+ 
+
+      
+      
       .navigation {
         position: fixed;
         left: 100%;
@@ -401,14 +458,8 @@ footer {
     }
   }
   .section1 {
-
     .hero {
       flex-direction: column-reverse;
-     
-    
-     
-     
-
 
       .right {
         margin-bottom: 3rem;
@@ -462,7 +513,10 @@ footer {
   .floating {
     height: 35px;
     width: 35px;
+
   }
+
+  
 }
 //end tablet media query
 
