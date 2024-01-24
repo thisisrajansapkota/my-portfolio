@@ -431,7 +431,7 @@ footer .footer-container .social-links ul {
     transform: rotate(360deg);
   }
 }
-@media (width <= 768px) {
+@media (width <= 769px) {
   .primary-header .right .menu-icon {
     margin-top: 35px;
     display: block;
@@ -455,7 +455,7 @@ footer .footer-container .social-links ul {
     position: fixed;
     left: 100%;
     background-color: #41a29b;
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -544,7 +544,12 @@ footer .footer-container .social-links ul {
   .primary-header .right #check:checked ~ .navigation {
     left: calc(100% - 13rem);
   }
+  .section1 {
+    padding: 0;
+  }
   .section1 .hero {
+    margin: 0;
+    padding: 0;
     flex-direction: column-reverse;
   }
   .section1 .hero .right {

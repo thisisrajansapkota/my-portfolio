@@ -444,7 +444,7 @@ footer {
         position: fixed;
         left: 100%;
         background-color: $primary-color;
-        height: 100vh;
+        height: 60vh;
         width: 100vw;
         @include flex-me();
         flex-direction: column;
@@ -547,9 +547,12 @@ footer {
     }
   }
   .section1 {
-    // padding: 1rem;
+   padding: 0;
 
     .hero {
+ 
+      margin: 0;
+      padding: 0;
       flex-direction: column-reverse;
       .right {
         margin-bottom: 3rem;
