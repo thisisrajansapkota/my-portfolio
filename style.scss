@@ -424,15 +424,14 @@ footer {
 
 @include tablet() {
   .primary-header {
-    // @include flex-me();
-    // justify-content: space-evenly;
+    
     .right {
       .menu-icon {
         margin-top: 45px;
         display: block;
         cursor: pointer;
         top: -13px;
-        left: -15px;
+        left: -55px;
         position: relative;
       }
 
@@ -553,7 +552,6 @@ align-items: center;
 
 @include miniTablet() {
   .primary-header {
- 
 
     .left {
       margin: 0;
@@ -561,7 +559,6 @@ align-items: center;
     }
     .right {
       .menu-icon {
-        display: block;
         cursor: pointer;
       }
       .navigation {
@@ -638,15 +635,11 @@ align-items: center;
   
 
     .skills{
-  width: 70px;
-
-  
+  width: 70px; 
   
     }
 
   }
-
- 
 
   .section4 {
 
@@ -684,27 +677,34 @@ align-items: center;
   }
 
 }
+
+
+
+
+//media query phone starts here
+@include phone() {
+  .web{
+    color: brown
+    font-weight: ;
+    font-size: xx-small;
+    size: 200%;
+    background-color: #0d908b;
+  }
+  .primary-header {
+  .right {
+      .menu-icon {
+        // padding-left: 1005px;
+        // display: block;
+        // cursor: pointer;
+        top: -21px;
+        left: -15px ;
+        // position: relative;
+      }
+    }
+    }
+  }
 //end mini-tablet media query
 
-// @include miniTablet() {
-
-
-// .section3{
-//   background-color: $secondary-color !important;
-
-
-//   .skills-container {
-//   background-color: $primary-color !important;
-//   color: #0d908b !important;
-//     display: flex;
-//     // justify-content: center;
-//     // align-items: center;
-//     // gap: 1rem;
-//     // justify-content: space-around;
-//     flex-direction: column !important;
-// }
-  
-// }
 
 
 

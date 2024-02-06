@@ -10,8 +10,13 @@
     }
 }
 
+// @mixin miniTablet(){
+//     @media (width<=500){
+//         @content;
+//     }
+// }
 @mixin phone(){
-    @media (width<=368px){
+    @media (width<=405px){
         @content;
     }
 }
