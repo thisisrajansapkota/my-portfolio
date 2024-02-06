@@ -136,6 +136,10 @@ a {
   border-radius: 2rem;
   cursor: pointer;
 }
+.section1 .hero .left button :hover {
+  background-color: #471ace;
+  transform: translateY(50%);
+}
 .section1 .hero .right {
   display: flex;
   justify-content: center;
@@ -268,7 +272,7 @@ a {
   text-align: center;
 }
 .section4 .project-container .project-card .bottom p:nth-child(3) {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .section4 .project-container .project-card .bottom .github-icon {
   display: flex;
@@ -464,8 +468,8 @@ footer .footer-container .social-links ul {
     margin-top: 45px;
     display: block;
     cursor: pointer;
-    top: -13px;
-    left: -55px;
+    top: -21px;
+    left: -5px;
     position: relative;
   }
   .primary-header .right .menu-icon:hover {
@@ -581,16 +585,16 @@ footer .footer-container .social-links ul {
   }
 }
 @media (width <= 500) {
-  .primary-header .right .left {
+  .primary-header .left {
     margin: 0;
     padding: 0;
   }
-  .primary-header .right .right .menu-icon {
-    display: block;
-    cursor: pointer;
+  .primary-header .right .menu-icon {
+    left: -30px;
+    top: -21px;
   }
-  .primary-header .right .right .navigation {
-    position: fixed;
+  .primary-header .right .navigation {
+    position: relative;
     left: 100%;
     background-color: #41a29b;
     height: 150vh;
@@ -604,36 +608,36 @@ footer .footer-container .social-links ul {
     align-items: start;
     padding-left: 70px;
   }
-  .primary-header .right .right #check:checked ~ .navigation {
+  .primary-header .right #check:checked ~ .navigation {
     left: calc(100% - 13rem);
   }
-  .primary-header .section1 {
+  .section1 {
     padding: 0;
     margin: 0;
   }
-  .primary-header .section1 .hero {
+  .section1 .hero {
     width: 100%;
     margin: 0;
     padding: 0;
     flex-direction: column-reverse;
   }
-  .primary-header .section1 .hero .left {
+  .section1 .hero .left {
     margin: 0;
     padding: 0;
     width: 100%;
   }
-  .primary-header .section1 .hero .right {
+  .section1 .hero .right {
     margin-bottom: 3rem;
     margin: 0;
     padding: 0;
   }
-  .primary-header .section2 .info-lists {
+  .section2 .info-lists {
     flex-direction: column;
   }
-  .primary-header .section2 .divider {
+  .section2 .divider {
     transform: rotate(90deg);
   }
-  .primary-header .section3 {
+  .section3 {
     margin: 0;
     padding: 0;
     display: flex;
@@ -642,55 +646,51 @@ footer .footer-container .social-links ul {
     gap: 1rem;
     flex-direction: column;
   }
-  .primary-header .section3 .skills-container {
+  .section3 .skills-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  .primary-header .section3 .skills {
+  .section3 .skills {
     width: 70px;
   }
-  .primary-header .section4 {
+  .section4 {
     margin-top: -50px;
   }
-  .primary-header .section5 {
+  .section5 {
     padding-top: 33px;
   }
-  .primary-header .section5 .about-container {
+  .section5 .about-container {
     padding-bottom: 15px;
   }
-  .primary-header .section5 .about-container .left {
+  .section5 .about-container .left {
     display: none;
   }
-  .primary-header .section5 .about-container .right {
+  .section5 .about-container .right {
     align-items: center;
   }
-  .primary-header .section5 .about-container .right h2 {
+  .section5 .about-container .right h2 {
     padding-top: 8px;
   }
-  .primary-header .section5 .about-container .right .tag {
+  .section5 .about-container .right .tag {
     padding-bottom: 8px;
     justify-content: space-evenly;
   }
-  .primary-header .section5 .about-container .right .interests {
+  .section5 .about-container .right .interests {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     justify-content: space-evenly;
   }
-  .primary-header .floating {
+  .floating {
     height: 35px;
     width: 35px;
   }
 }
 @media (width <= 405px) {
-  h1 {
-    font-weight: 100;
-    font-size: 1px;
-  }
   .primary-header .right .menu-icon {
     top: -21px;
-    left: -15px;
+    left: -3px;
   }
 }/*# sourceMappingURL=style.css.map */
