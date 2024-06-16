@@ -728,4 +728,37 @@ footer .footer-container .social-links ul {
     top: -21px;
     left: -3px;
   }
+  .section3 {
+    margin: 2px;
+    padding: 3rem;
+    padding-top: 4.5rem;
+  }
+  .section3 .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+  .section3 .skills-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .section3 .other-skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .section3 .other-skills-container div ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */
