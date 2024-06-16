@@ -246,6 +246,16 @@ a {
 .section3 .skills-container div i {
   font-size: 5rem;
 }
+.section3 .other-skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.section3 .other-skills-container div ul li {
+  padding: 1rem;
+}
 
 .section4 .title {
   text-align: center;

@@ -244,10 +244,19 @@ transform: translateY(50%);
       }
  
     }
-   
   }
-  
-}
+  .other-skills-container{
+     @include flex-me();
+    justify-content: center;
+     div ul li {
+      padding: 1rem;
+
+
+ 
+    }
+    }
+  }
+
 
 //Projects
 .section4 {
