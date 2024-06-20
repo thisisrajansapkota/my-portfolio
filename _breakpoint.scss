@@ -3,7 +3,14 @@
         @content;
     }
 }
+//some cases 
+@mixin mediumTablet(){
+    @media (width>=501){
+        @content;
+    }
+}
 
+//some cases
 @mixin miniTablet(){
     @media (width<=500){
         @content;
