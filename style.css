@@ -823,5 +823,7 @@ footer .footer-container .social-links ul {
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
