@@ -1,0 +1,60 @@
+/* Reset and basic styles */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  background-color: #0c0c1d;
+  color: lightgrey;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  /* min-height: 100vh; */
+  /* padding: 0 35px; */
+  scroll-snap-align: center;
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #0b0b0b;
+  color: aliceblue;
+}
+
+/* Light mode styles */
+.light {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+/* Toggle icon container */
+.toggle-container {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Toggle icon image */
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff; /* Adjust color of the icon */
+}
+
+.toggle-container:hover {
+  background-color: #555;
+}

@@ -1,0 +1,148 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure video takes up entire screen */
+.heroSec {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-background{
+   position: absolute;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ filter: brightness(100%);
+}
+
+/* Flexbox for content */
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  color: #ffffff; /* Text color */
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 60px;
+  padding-top: 60px;
+}
+
+.name h1 {
+  font-size: 3rem; /* Example font size adjustment */
+  font-weight: bold; /* Example font weight adjustment */
+}
+
+.tag h3 {
+  font-size: 1.5rem; /* Example font size adjustment */
+  font-weight: 400; /* Example font weight adjustment */
+}
+
+.sub-tag {
+  font-size: 1rem; /* Example font size adjustment */
+  margin-top: 1rem; /* Example margin adjustment */
+}
+
+.cv-btn {
+  background-color: #faa11b; /* Example button background color */
+  color: #ffffff; /* Example button text color */
+  padding: 1rem 2rem; /* Example button padding */
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem; /* Example button border radius */
+  margin-top: 1rem; /* Example margin adjustment */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  margin-top: 80px;
+  top: 20% ;
+  max-width: 25%; /* Adjust size for smaller screens */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 9px rgb(250, 161, 27);
+  filter: drop-shadow(0 0 5px rgba(255, 217, 0, 0.8));
+  transition: transform 0.3s ease-in-out;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.right img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px rgb(26, 25, 25);
+  filter: drop-shadow(0 0 15px rgba(255, 217, 0, 0.8));
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .left, .right {
+    width: 100%; /* Full width for smaller screens */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center align text */
+  }
+
+  .right img {
+    max-width: 40%; /* Adjust size for smaller screens */
+    margin-top: 2rem; /* Example margin adjustment */
+  }
+}
+
+@media (max-width: 652px) {
+  .left, .right {
+    width: 100%; /* Full width for smallest screens */
+    padding: 1rem; /* Adjust padding for smallest screens */
+  }
+
+  .right img {
+    max-width: 50%; /* Adjust size for smallest screens */
+  }
+}

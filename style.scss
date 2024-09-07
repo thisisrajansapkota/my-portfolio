@@ -810,8 +810,6 @@ animation-timing-function: ease-in-out;
         @include flex-me();
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row;
       }
     }
   }

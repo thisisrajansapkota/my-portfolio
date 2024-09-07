@@ -1,0 +1,27 @@
+.floating {
+  z-index: 999;
+   background-color: #faa11b;
+  color: #fff; /* Replace with your desired text color */
+  position: fixed;
+  bottom: 20px; /* Adjust positioning for mobile */
+  right: 20px; /* Adjust positioning for mobile */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating i {
+  font-size: 2rem;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .floating {
+    bottom: 20px; /* Adjust positioning for smaller screens */
+    right: 20px; /* Adjust positioning for smaller screens */
+  }
+}

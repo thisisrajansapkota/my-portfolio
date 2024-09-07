@@ -1,0 +1,96 @@
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    color: rgb(255, 255, 255);
+  visibility: hidden;
+  width: 120px;
+  /* background-color: $primary-color; */
+  background-color: #2b9fb3;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.section3 {
+  margin: 2px;
+  padding: 3rem;
+  padding-top: 4.5rem;
+}
+
+.section3 .skills-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section3 .skills-container div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.section3 .skills-container div i {
+  font-size: 5rem;
+}
+
+.section3 .other-skills-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.section3 .other-skills-container div ul li {
+  padding: 1rem;
+}
+
+.skillicon {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.skillicons {
+  animation-name: floating-down;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-down {
+ 0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+}

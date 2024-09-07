@@ -1,0 +1,62 @@
+.parallax{
+  scroll-snap-align: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+}
+.parallax .text h1{
+    text-align: center;
+    font-size: 100px;
+}
+   
+.parallax .text h2{
+    font-size: 30px;
+    text-align: center;
+}
+/* .parallax .text{
+    margin-bottom: 300px;
+
+} */
+.mountains{
+    background-image: url(../../assets/images/mountains.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+}
+.planets{
+    background-image: url(../../assets/images/planets.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+}
+/* .sun{
+    background-image: url(../../assets/images/sun.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+} */
+.stars{
+    background-image: url(../../assets/images/stars.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+
+}
